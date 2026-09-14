@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { hotelSocialRecords, type HotelSocialRecord } from "./hotelSocialData";
 import styles from "./HotelSocialOverview.module.css";
 
@@ -230,12 +231,12 @@ export function HotelSocialOverview() {
         <div className={styles.headerInner}>
           <div className={styles.brandBlock}>
             <span className={styles.brandMark}>R</span>
-            <div><strong>酒店夜间服务社媒调研</strong><small>近 30 天 · 亚朵 / 全季</small></div>
+            <div><strong>酒店服务社媒调研</strong><small>近 30 天 · 亚朵 / 全季</small></div>
           </div>
           <nav className={styles.tabs} aria-label="报告页面">
             <span className={styles.activeTab}>总览</span>
-            <span>用户（UGC）</span>
-            <span>广告（商家）</span>
+            <Link href="/hotel-social-report/ugc">用户（UGC）</Link>
+            <Link href="/hotel-social-report/advertiser">广告（商家）</Link>
           </nav>
           <div className={styles.status}><i /> 数据已接入</div>
         </div>
